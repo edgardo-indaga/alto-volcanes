@@ -1,101 +1,198 @@
-import Image from "next/image";
+import Image from 'next/image';
+import Link from 'next/link';
+
+import HeaderHome from '@/components/HeaderHome/HeaderHome';
+import GalleryText from '@/components/Gallery/GalleryText';
+import SliderGallery from '@/components/Gallery/SliderGallery';
+
+import StepperWithTooltips from '@/components/StepperWithTooltips/StepperWithTooltips';
+
+import { ArrowDownToLine } from 'lucide-react';
+
+const slides = [
+    {
+        src: '/foto_proyecto.webp',
+        title: 'Foto Proyecto 1',
+        description: 'Descripción de la foto 1',
+    },
+];
+
+const carousel = [{ src: '/slider-01.webp' }, { src: '/slider-02.webp' }];
 
 export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.js
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    const photoProyecto = '/foto_proyecto.webp';
+    const pinMapa = '/ubicacion.svg';
+    const floresFondo = '/fondo-flores.webp';
+    const fondoBosque = '/fondo-urbanizacion.webp';
+    const urbanizacionSostenible = '/urbanizacion-sostenible.webp';
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
-  );
+    return (
+        <>
+            <HeaderHome />
+
+            <section id="proyecto" className="md:py-[70px]">
+                <div className="container mx-auto">
+                    <div className="flex flex-col">
+                        <div className="flex flex-col items-center">
+                            <h1 className="font-sora text-[47px] leading-[47px] tracking-[0.1em] text-verdeTitulo">
+                                EL PROYECTO
+                            </h1>
+                            <div className="md:mt-[50px] md:w-[600px]">
+                                <p className="text-center font-figtree text-[16px] leading-[24px] text-grisParrafo">
+                                    Alto Volcanes es un proyecto de urbanización que habilitará
+                                    calles y manzanas a partir de las cuales se crearán nuevos
+                                    conjuntos habitacionales.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <div className="container mx-auto md:mb-[70px]">
+                    <div className="flex-fol flex items-center justify-center">
+                        <div
+                            className="flex h-[527px] w-[995px] flex-col items-center justify-center rounded-[30px] drop-shadow-xl"
+                            style={{
+                                backgroundImage: `url(${photoProyecto})`,
+                                backgroundSize: 'cover',
+                                backgroundPosition: 'center',
+                            }}
+                        >
+                            <div className="flex flex-col items-center justify-center rounded-[30px] bg-blanco p-[30px] opacity-85 md:h-[246px] md:w-[500px]">
+                                <p className="mb-[20px] text-center font-figtree text-[16px] font-normal leading-[24px] text-grisParrafo">
+                                    El proyecto busca dar respuesta a las{' '}
+                                    <b>
+                                        necesidades locales de vivienda, equipamiento e
+                                        infraestructura vial
+                                    </b>{' '}
+                                    y, al mismo tiempo, asegurar la conservación de la
+                                    biodiversidad, la provisión de servicios ecosistémicos y el
+                                    respeto por las identidades locales, para un habitar sostenible
+                                    y armónico.
+                                </p>
+                                <GalleryText slides={slides} />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <div className="container mx-auto md:py-[70px]">
+                    <div className="grid grid-cols-2">
+                        <div className="span col-1 flex flex-col justify-center md:h-[400px] md:pr-[100px]">
+                            <div className="flex md:mb-[40px]">
+                                <Image
+                                    src={pinMapa}
+                                    alt={'Pin Mapa'}
+                                    width={19.78}
+                                    height={25.72}
+                                    className="mr-[20px]"
+                                />
+                                <h2 className="font-sora text-[25px] font-semibold leading-[35px] tracking-[0.1em] text-verdeTitulo">
+                                    UBICACIÓN
+                                </h2>
+                            </div>
+                            <div>
+                                <p className="mb-[20px] font-figtree text-[16px] font-normal leading-[24px] text-grisParrafo">
+                                    Se ubica en el <b>sector nororiente de Puerto Montt,</b> en un
+                                    área definida por el Plano Regulador Comunal como “extensión
+                                    urbana”.
+                                </p>
+                                <p className="mb-[20px] font-figtree text-[16px] font-normal leading-[24px] text-grisParrafo">
+                                    Está próximo al aeródromo y al parque La Paloma, sobre el barrio
+                                    Valle Volcanes, una zona residencial consolidada de la comuna.
+                                </p>
+                            </div>
+                        </div>
+                        <div className="span col-1 md:h-[400px]">
+                            <SliderGallery slides={carousel} />
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section
+                className="md:pb-[160px] md:pt-[70px]"
+                style={{
+                    backgroundImage: `url(${floresFondo})`,
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'top',
+                }}
+            >
+                <div className="container mx-auto">
+                    <div className="flex flex-col items-center justify-center md:h-[600px]">
+                        <div className="flex w-[600px] md:flex-col">
+                            <h3 className="mb-[40px] text-center font-figtree text-[25px] font-bold leading-[35px] text-grisTitulo">
+                                Alto Volcanes ingresó al SEIA vía Estudio de Impacto Ambiental
+                                (EIA).
+                            </h3>
+                            <p className="mb-[20px] text-center font-figtree text-[16px] font-normal leading-[24px] text-grisParrafo">
+                                Este Estudio presenta una descripción del proyecto, la
+                                caracterización de las componentes ambientales del territorio, una
+                                evaluación de sus impactos y una propuesta de medidas de mitigación,
+                                con sus respectivos planes de seguimiento.
+                            </p>
+                        </div>
+                        <div className="flex md:h-[350px]">
+                            <StepperWithTooltips />
+                        </div>
+                        <div>
+                            <Link
+                                href="/"
+                                className="flex rounded-[30px] bg-verdeTitulo font-figtree text-[19px] leading-[35px] text-blanco hover:bg-[#44985a] hover:opacity-50 md:px-[30px] md:py-[8px]"
+                            >
+                                <ArrowDownToLine className="mr-[10px] mt-[8px]" size={20} />
+                                Descarga expediente completo del EIA
+                            </Link>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section
+                className="h-[720px] md:py-[70px]"
+                style={{
+                    backgroundImage: `url(${fondoBosque})`,
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'top',
+                }}
+            >
+                <div className="container mx-auto">
+                    <div className="grid grid-cols-2">
+                        <div className="col-span-1">
+                            <Image
+                                src={urbanizacionSostenible}
+                                alt={'Urbanización Sostenible'}
+                                width={432}
+                                height={646}
+                                className="md:mt-[-140px]"
+                            />
+                        </div>
+                        <div className="col-span-1 flex flex-col items-end justify-center md:h-[580px]">
+                            <h1 className="font-sora text-[47px] uppercase leading-[47px] tracking-[0.1em] text-blanco md:text-end">
+                                Urbanización sostenible
+                            </h1>
+                            <p className="mb-[20px] font-figtree text-[16px] font-normal leading-[24px] text-blanco md:my-[60px] md:text-end">
+                                Alto Volcanes pretende ser un referente de buenas prácticas, que
+                                reduce su impacto y protege los valores ambientales del lugar. Esto,
+                                mediante un Plan Verdeazul orientado conservar
+                                <b>el régimen hidrológico del sistema</b>, proveer hábitat y
+                                conectividad ecológica y ofrecer espacios naturales de uso público
+                                de alto estándar paisajístico.
+                            </p>
+                            <Link
+                                className="rounded-[30px] border-[2px] border-blanco text-center font-figtree text-[19px] leading-[35px] text-blanco hover:bg-blanco hover:text-grisTitulo hover:opacity-50 md:px-[30px] md:py-[8px]"
+                                href={'/'}
+                            >
+                                PLAN MAESTRO VERDEAZUL
+                            </Link>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </>
+    );
 }
