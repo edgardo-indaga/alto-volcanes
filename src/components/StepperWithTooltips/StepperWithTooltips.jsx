@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
+import Image from 'next/image';
 
 const StepperWithTooltips = () => {
     const steps = [
@@ -57,9 +58,11 @@ const StepperWithTooltips = () => {
                     </div>
 
                     {/* Icon below the circle */}
-                    <img
+                    <Image
                         src={step.icon}
                         alt={`Icono ${step.id}`}
+                        width={45}
+                        height={45}
                         className="mt-2 h-[45px] w-[45px] object-contain"
                     />
                 </div>

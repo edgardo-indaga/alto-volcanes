@@ -1,19 +1,16 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import { ArrowDownToLine } from 'lucide-react';
 
 import HeaderHome from '@/components/HeaderHome/HeaderHome';
 import GalleryText from '@/components/Gallery/GalleryText';
 import SliderGallery from '@/components/Gallery/SliderGallery';
-
+import ParrafoComponent from '@/components/ParrafoComponent/ParrafoComponent';
 import StepperWithTooltips from '@/components/StepperWithTooltips/StepperWithTooltips';
-
-import { ArrowDownToLine } from 'lucide-react';
 
 const slides = [
     {
         src: '/foto_proyecto.webp',
-        title: 'Foto Proyecto 1',
-        description: 'Descripción de la foto 1',
     },
 ];
 
@@ -38,11 +35,12 @@ export default function Home() {
                                 EL PROYECTO
                             </h1>
                             <div className="md:mt-[50px] md:w-[600px]">
-                                <p className="text-center font-figtree text-[16px] leading-[24px] text-grisParrafo">
-                                    Alto Volcanes es un proyecto de urbanización que habilitará
+                                <ParrafoComponent
+                                    align="text-center"
+                                    text="Alto Volcanes es un proyecto de urbanización que habilitará
                                     calles y manzanas a partir de las cuales se crearán nuevos
-                                    conjuntos habitacionales.
-                                </p>
+                                    conjuntos habitacionales."
+                                />
                             </div>
                         </div>
                     </div>
@@ -61,17 +59,10 @@ export default function Home() {
                             }}
                         >
                             <div className="flex flex-col items-center justify-center rounded-[30px] bg-blanco p-[30px] opacity-85 md:h-[246px] md:w-[500px]">
-                                <p className="mb-[20px] text-center font-figtree text-[16px] font-normal leading-[24px] text-grisParrafo">
-                                    El proyecto busca dar respuesta a las{' '}
-                                    <b>
-                                        necesidades locales de vivienda, equipamiento e
-                                        infraestructura vial
-                                    </b>{' '}
-                                    y, al mismo tiempo, asegurar la conservación de la
-                                    biodiversidad, la provisión de servicios ecosistémicos y el
-                                    respeto por las identidades locales, para un habitar sostenible
-                                    y armónico.
-                                </p>
+                                <ParrafoComponent
+                                    align="text-center"
+                                    text="El proyecto busca dar respuesta a las <b>necesidades locales de vivienda, equipamiento e infraestructura vial</b>y, al mismo tiempo, asegurar la conservación de la biodiversidad, la provisión de servicios ecosistémicos y el respeto por las identidades locales, para un habitar sostenible y armónico."
+                                />
                                 <GalleryText slides={slides} />
                             </div>
                         </div>
@@ -90,21 +81,23 @@ export default function Home() {
                                     width={19.78}
                                     height={25.72}
                                     className="mr-[20px]"
+                                    priority
                                 />
                                 <h2 className="font-sora text-[25px] font-semibold leading-[35px] tracking-[0.1em] text-verdeTitulo">
                                     UBICACIÓN
                                 </h2>
                             </div>
                             <div>
-                                <p className="mb-[20px] font-figtree text-[16px] font-normal leading-[24px] text-grisParrafo">
-                                    Se ubica en el <b>sector nororiente de Puerto Montt,</b> en un
+                                <ParrafoComponent
+                                    align="text-in"
+                                    text="Se ubica en el <b>sector nororiente de Puerto Montt,</b> en un
                                     área definida por el Plano Regulador Comunal como “extensión
-                                    urbana”.
-                                </p>
-                                <p className="mb-[20px] font-figtree text-[16px] font-normal leading-[24px] text-grisParrafo">
-                                    Está próximo al aeródromo y al parque La Paloma, sobre el barrio
-                                    Valle Volcanes, una zona residencial consolidada de la comuna.
-                                </p>
+                                    urbana”."
+                                />
+                                <ParrafoComponent
+                                    align="text-in"
+                                    text="Está próximo al aeródromo y al parque La Paloma, sobre el barrio Valle Volcanes, una zona residencial consolidada de la comuna."
+                                />
                             </div>
                         </div>
                         <div className="span col-1 md:h-[400px]">
@@ -129,24 +122,26 @@ export default function Home() {
                                 Alto Volcanes ingresó al SEIA vía Estudio de Impacto Ambiental
                                 (EIA).
                             </h3>
-                            <p className="mb-[20px] text-center font-figtree text-[16px] font-normal leading-[24px] text-grisParrafo">
-                                Este Estudio presenta una descripción del proyecto, la
+                            <ParrafoComponent
+                                align="text-center"
+                                text="Este Estudio presenta una descripción del proyecto, la
                                 caracterización de las componentes ambientales del territorio, una
                                 evaluación de sus impactos y una propuesta de medidas de mitigación,
-                                con sus respectivos planes de seguimiento.
-                            </p>
+                                con sus respectivos planes de seguimiento."
+                            />
                         </div>
                         <div className="flex md:h-[350px]">
                             <StepperWithTooltips />
                         </div>
                         <div>
-                            <Link
-                                href="/"
+                            <a
+                                href="https://seia.sea.gob.cl/expediente/expedientesEvaluacion.php?modo=ficha&id_expediente=2161208595"
                                 className="flex rounded-[30px] bg-verdeTitulo font-figtree text-[19px] leading-[35px] text-blanco hover:bg-[#44985a] hover:opacity-50 md:px-[30px] md:py-[8px]"
+                                target={'_blank'}
                             >
                                 <ArrowDownToLine className="mr-[10px] mt-[8px]" size={20} />
                                 Descarga expediente completo del EIA
-                            </Link>
+                            </a>
                         </div>
                     </div>
                 </div>

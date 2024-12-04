@@ -26,7 +26,7 @@ export default function SliderGallery({ slides }) {
                     <div key={idx} className="h-[400px]" onClick={() => setIndex(idx)}>
                         <Image
                             src={slide.src}
-                            alt={slide.title}
+                            alt={'Slider'}
                             width={486}
                             height={390}
                             className="h-auto w-full cursor-pointer rounded-[30px]"

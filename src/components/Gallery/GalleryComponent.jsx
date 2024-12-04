@@ -19,6 +19,9 @@ import 'yet-another-react-lightbox/plugins/thumbnails.css';
 export default function GalleryComponent({ slides, rowHeight }) {
     const [index, setIndex] = React.useState(-1);
 
+    console.log('Slides:', slides);
+    console.log('Row Height:', rowHeight);
+
     return (
         <>
             <PhotoAlbum

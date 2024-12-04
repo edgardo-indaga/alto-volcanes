@@ -17,7 +17,7 @@ export default function RootLayout({ children }) {
         <html lang="es" className="!scroll-smooth">
             <body>
                 <HamburgerMenu />
-                {children}
+                <main>{children}</main>
                 <FooterComponent />
             </body>
         </html>

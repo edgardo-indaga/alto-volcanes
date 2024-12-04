@@ -1,6 +1,5 @@
 'use client';
 
-import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useEffect, useState } from 'react';
@@ -52,7 +51,7 @@ export default function HamburgerMenu() {
                                     strokeWidth="1.5"
                                     stroke="currentColor"
                                     data-slot="icon"
-                                    className="bg-verdeTitulo text-blanco h-12 w-12 rounded-[50%] p-[8px]"
+                                    className="h-12 w-12 rounded-[50%] bg-verdeTitulo p-[8px] text-blanco"
                                 >
                                     <path
                                         strokeLinecap="round"
@@ -67,7 +66,7 @@ export default function HamburgerMenu() {
                     <div
                         className={
                             menuOpen
-                                ? 'bg-verdeTitulo fixed right-[-20px] top-[-22px] z-30 h-[105vh] w-[105vw] p-10 opacity-95 duration-500 ease-in-out md:w-[30vw]'
+                                ? 'fixed right-[-20px] top-[-22px] z-30 h-[105vh] w-[105vw] bg-verdeTitulo p-10 opacity-95 duration-500 ease-in-out md:w-[30vw]'
                                 : 'fixed right-[-100%] top-[-22px] h-[105vh] p-10 duration-500 ease-in-out'
                         }
                     >
@@ -80,7 +79,7 @@ export default function HamburgerMenu() {
                                     strokeWidth="1.5"
                                     stroke="currentColor"
                                     data-slot="icon"
-                                    className="text-blanco h-8 w-8"
+                                    className="h-8 w-8 text-blanco"
                                 >
                                     <path
                                         strokeLinecap="round"
@@ -102,13 +101,13 @@ export default function HamburgerMenu() {
                                     onClick={() => setMenuOpen(false)}
                                     className={styles.linksMobile}
                                 >
-                                    <Link href="/">Plan Verdeazul</Link>
+                                    <Link href="/plan">Plan Verdeazul</Link>
                                 </li>
                                 <li
                                     onClick={() => setMenuOpen(false)}
                                     className={styles.linksMobile}
                                 >
-                                    <Link href="/">Contacto</Link>
+                                    <Link href="/contacto">Contacto</Link>
                                 </li>
                             </ul>
                         </div>
