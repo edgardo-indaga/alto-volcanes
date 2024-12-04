@@ -1,41 +1,41 @@
 'use client';
 
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 
 const styles = {
     linksMobile:
-        'font-barlow cursor-pointer uppercase text-blanco text-[18px] py-[15px] font-regular',
+        'font-sora font-semibold text-[25px] tracking-[0.1em] leading-[35px] text-right text-blanco py-[15px]',
 };
 
 export default function HamburgerMenu() {
     const [menuOpen, setMenuOpen] = useState(false);
-    const [bgColor, setBgColor] = useState('bg-transparent');
-    const [key, setKey] = useState(Math.random());
-    const pathname = usePathname();
+    const menuRef = useRef(null);
 
     const toggleMenu = () => setMenuOpen(!menuOpen);
 
     useEffect(() => {
-        const changeBackground = () => {
-            if (window.scrollY >= 150) {
-                setBgColor('bg-[#EFEBE1F2]');
-                setKey(Math.random()); // Esto forzará un renderizado
-            } else {
-                setBgColor('bg-transparent');
-                setKey(Math.random()); // Esto forzará un renderizado
+        const handleClickOutside = (event) => {
+            if (menuRef.current && !menuRef.current.contains(event.target)) {
+                setMenuOpen(false);
             }
         };
 
-        window.addEventListener('scroll', changeBackground);
-        return () => window.removeEventListener('scroll', changeBackground);
-    }, []);
+        if (menuOpen) {
+            document.addEventListener('mousedown', handleClickOutside);
+        } else {
+            document.removeEventListener('mousedown', handleClickOutside);
+        }
+
+        return () => {
+            document.removeEventListener('mousedown', handleClickOutside);
+        };
+    }, [menuOpen]);
 
     return (
         <header>
             <div className="container mx-auto">
-                <nav className="nav-header flex h-[100px] items-center px-[20px] md:mx-[12px] xl:mx-auto xl:px-[30px]">
+                <nav className="nav-header flex h-[100px] items-center px-[30px] md:mx-[12px] xl:mx-auto xl:px-[40px]">
                     <div className="flex w-full items-center justify-end">
                         {/* BARS MENU MOBILE */}
                         <div className="flex">
@@ -64,9 +64,10 @@ export default function HamburgerMenu() {
                     </div>
                     {/* MENU MOBILE */}
                     <div
+                        ref={menuRef}
                         className={
                             menuOpen
-                                ? 'fixed right-[-20px] top-[-22px] z-30 h-[105vh] w-[105vw] bg-verdeTitulo p-10 opacity-95 duration-500 ease-in-out md:w-[30vw]'
+                                ? 'fixed right-[-20px] top-[-22px] z-30 h-[103vh] w-[105vw] bg-verdeTitulo p-16 opacity-95 duration-500 ease-in-out md:w-[30vw]'
                                 : 'fixed right-[-100%] top-[-22px] h-[105vh] p-10 duration-500 ease-in-out'
                         }
                     >
@@ -89,8 +90,8 @@ export default function HamburgerMenu() {
                                 </svg>
                             </button>
                         </div>
-                        <div className="flex flex-col items-center py-4 pt-1">
-                            <ul className="flex flex-col items-center">
+                        <div className="flex h-[100vh] flex-col items-end justify-center py-4 pt-1">
+                            <ul className="flex flex-col">
                                 <li
                                     onClick={() => setMenuOpen(false)}
                                     className={styles.linksMobile}

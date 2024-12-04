@@ -1,5 +1,4 @@
 import { FormContact } from '@/components/Form/FormContact';
-import ParrafoComponent from '@/components/ParrafoComponent/ParrafoComponent';
 
 const portadaContact = '/bg-cabeza-contacto.webp';
 const footerContact = '/bg-footer-contacto.webp';
