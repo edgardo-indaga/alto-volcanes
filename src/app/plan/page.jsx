@@ -3,7 +3,8 @@ import Link from 'next/link';
 
 import ParrafoComponent from '@/components/ParrafoComponent/ParrafoComponent';
 import SingleImageLightbox from '@/components/Gallery/SingleImageLightbox';
-import ButtonComponent from '@/components/ButtonComponent/ButtonComponent';
+import AlterSingleImageLightbox from '@/components/Gallery/AlterSingleImagenLightbox';
+import ArrowSliderGallery from '@/components/Gallery/ArrowSliderGaller';
 
 const portadaPlan = '/portada-verde-azul.webp';
 const plan01 = '/img-plan-01.webp';
@@ -11,6 +12,14 @@ const plan02 = '/img-plan-02.webp';
 const anilloVerde = '/anillo-verde.svg';
 const drenajeUrbano = '/drenaje-urbano-sostenible.svg';
 const bannerPlan = '/banner-plan.webp';
+const anilloMapa = '/anillo-mapa.webp';
+const anilloMapaCompleto = '/anillo-mapa-completo.webp';
+const veintiCuatro = '/24_ha_anillo-verde.svg';
+const drenajeMapa = '/drenaje-mapa.webp';
+const drenajeMapaCompleto = '/drenaje-mapa-completo.webp';
+
+const slider = ['/anillo-verde-slider-1.webp', '/anillo-verde-slider-2.webp'];
+const sliderOtro = ['/drenaje-slider-1.webp', '/drenaje-slider-2.webp'];
 
 export default function PlanVerdeAzul() {
     return (
@@ -99,7 +108,7 @@ export default function PlanVerdeAzul() {
                 </div>
             </section>
 
-            <section className="md:my-[100px] md:h-[780px]">
+            <section className="md:mb-[50px] md:mt-[100px] md:h-[780px]">
                 <div
                     className="md:h-[780px]"
                     style={{
@@ -108,6 +117,75 @@ export default function PlanVerdeAzul() {
                         backgroundPosition: 'top',
                     }}
                 ></div>
+            </section>
+
+            <section className="md:py-[70px]">
+                <div className="container mx-auto">
+                    <div className="grid grid-cols-2">
+                        <div className="col-span-1 flex flex-col justify-between md:h-[532px] md:pr-[55px]">
+                            <h1 className="font-sora font-medium leading-[55px] tracking-[0.1em] text-grisTitulo md:mb-[40px] md:text-[47px]">
+                                ANILLO <br /> VERDE
+                            </h1>
+
+                            <ParrafoComponent text="El proyecto contempla un Anillo Verde de más de 26 ha, que integra humedales, estero y bosque nativo, orientado a la <b>protección, renaturalización y conectividad de ecosistemas,</b> así como al disfrute y uso público." />
+                            <ParrafoComponent text="Este espacio incluye un circuito interpretativo, miradores y ciclovías, ofreciendo zonas con alto potencial para la recreación y aprendizaje al aire libre." />
+
+                            <div className="flex items-center justify-center rounded-[30px] bg-[#EDF4EA] md:h-[100px] md:w-[496px]">
+                                <Image
+                                    src={veintiCuatro}
+                                    alt={'24 Hectareas'}
+                                    width={63}
+                                    height={64}
+                                    className="md:mb-[12px] md:h-[61px] md:w-[60px]"
+                                />
+                                <h3 className="font-figtree text-[25px] font-bold leading-[40px] tracking-[0.04em] text-[#2b9440] opacity-60 md:ml-[20px]">
+                                    26,60 HA ANILLO VERDE{' '}
+                                </h3>
+                            </div>
+                        </div>
+                        <div className="col-span-1 flex justify-center">
+                            <AlterSingleImageLightbox
+                                alterUrl={anilloMapa}
+                                imageUrl={anilloMapaCompleto}
+                            />
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section className="md:py-[70px]">
+                <div className="container mx-auto">
+                    <div className="flex justify-center">
+                        <ArrowSliderGallery images={slider} />
+                    </div>
+                </div>
+            </section>
+
+            <section className="bg-[#EFEFEF] md:py-[70px]">
+                <div className="container mx-auto">
+                    <div className="grid grid-cols-2">
+                        <div className="flex flex-col justify-center md:h-[532px] md:pr-[55px]">
+                            <h1 className="font-sora font-medium leading-[55px] tracking-[0.1em] text-grisTitulo md:mb-[20px] md:text-[47px]">
+                                DRENAJE <br />
+                                URBANO <br />
+                                SOSTENIBLE
+                            </h1>
+                            <h5 className="font-figtree text-[25px] font-medium italic leading-[35px] text-[#2b9440] opacity-60 md:mb-[40px]">
+                                GESTIÓN LOCAL DE LAS AGUAS LLUVIAS
+                            </h5>
+                            <ParrafoComponent text="El proyecto integra soluciones de drenaje urbano sostenible, que busca mantener el <b>ciclo local del agua</b>. Esto se traduce en que los conjuntos de viviendas entregarán buena parte de sus aguas lluvias al sistema natural de esteros y humedales, previniendo inundaciones en zonas habitadas y conservando los ecosistemas." />
+                        </div>
+                        <div className="col-span-1 flex justify-center">
+                            <AlterSingleImageLightbox
+                                alterUrl={drenajeMapa}
+                                imageUrl={drenajeMapaCompleto}
+                            />
+                        </div>
+                    </div>
+                    <div className="flex justify-center md:mt-[70px]">
+                        <ArrowSliderGallery images={sliderOtro} />
+                    </div>
+                </div>
             </section>
         </>
     );
