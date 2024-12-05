@@ -180,7 +180,7 @@ export default function Home() {
                             </p>
                             <Link
                                 className="rounded-[30px] border-[2px] border-blanco text-center font-figtree text-[19px] leading-[35px] text-blanco hover:bg-blanco hover:text-grisTitulo hover:opacity-50 md:px-[30px] md:py-[8px]"
-                                href={'/'}
+                                href="/plan"
                             >
                                 PLAN MAESTRO VERDEAZUL
                             </Link>

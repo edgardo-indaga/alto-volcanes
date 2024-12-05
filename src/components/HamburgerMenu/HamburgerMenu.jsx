@@ -5,7 +5,7 @@ import { useEffect, useState, useRef } from 'react';
 
 const styles = {
     linksMobile:
-        'font-sora font-semibold text-[25px] tracking-[0.1em] leading-[35px] text-right text-blanco py-[15px]',
+        'font-sora font-semibold text-[25px] tracking-[0.1em] leading-[35px] text-right text-blanco py-[15px] uppercase',
 };
 
 export default function HamburgerMenu() {
@@ -67,7 +67,7 @@ export default function HamburgerMenu() {
                         ref={menuRef}
                         className={
                             menuOpen
-                                ? 'fixed right-[-20px] top-[-22px] z-30 h-[103vh] w-[105vw] bg-verdeTitulo p-16 opacity-95 duration-500 ease-in-out md:w-[30vw]'
+                                ? 'fixed right-[-20px] top-[-22px] z-30 h-[103vh] w-[105vw] bg-verdeTitulo px-16 py-8 opacity-95 duration-500 ease-in-out md:w-[30vw]'
                                 : 'fixed right-[-100%] top-[-22px] h-[105vh] p-10 duration-500 ease-in-out'
                         }
                     >

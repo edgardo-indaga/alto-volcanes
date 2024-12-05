@@ -1,5 +1,7 @@
+'use client';
+
 import Image from 'next/image';
-import Link from 'next/link';
+import { useRef } from 'react';
 
 import ParrafoComponent from '@/components/ParrafoComponent/ParrafoComponent';
 import SingleImageLightbox from '@/components/Gallery/SingleImageLightbox';
@@ -22,6 +24,16 @@ const slider = ['/anillo-verde-slider-1.webp', '/anillo-verde-slider-2.webp'];
 const sliderOtro = ['/drenaje-slider-1.webp', '/drenaje-slider-2.webp'];
 
 export default function PlanVerdeAzul() {
+    const anilloVerdeRef = useRef(null);
+    const drenajeRef = useRef(null);
+
+    const scrollToSection = (elementRef) => {
+        window.scrollTo({
+            top: elementRef.current.offsetTop,
+            behavior: 'smooth',
+        });
+    };
+
     return (
         <>
             <section
@@ -67,7 +79,7 @@ export default function PlanVerdeAzul() {
                             ¿EN QUÉ CONSISTE EL PLAN VERDE AZUL?
                         </h3>
                         <h4 className="text-center font-figtree text-[25px] font-normal leading-[25px] text-grisTitulo">
-                            El Plan Verdeazul está basado en dos estrategias principales:
+                            El Plan Verdeazul está basado en <b>dos estrategias</b> principales:
                         </h4>
                     </div>
 
@@ -81,12 +93,13 @@ export default function PlanVerdeAzul() {
                                     height={79}
                                     className="md:mb-[30px]"
                                 />
-                                <Link
-                                    href={'/'}
+
+                                <button
+                                    onClick={() => scrollToSection(anilloVerdeRef)}
                                     className="flex justify-center rounded-[30px] bg-verdeTitulo font-figtree text-[19px] leading-[35px] text-blanco hover:bg-[#44985a] hover:opacity-50 md:w-[370px] md:px-[30px] md:py-[8px]"
                                 >
                                     Habilitación Anillo Verde
-                                </Link>
+                                </button>
                             </div>
                             <div className="flex flex-col items-center justify-center">
                                 <Image
@@ -96,12 +109,13 @@ export default function PlanVerdeAzul() {
                                     height={76}
                                     className="md:mb-[30px]"
                                 />
-                                <Link
-                                    href={'/'}
+
+                                <button
+                                    onClick={() => scrollToSection(drenajeRef)}
                                     className="flex justify-center rounded-[30px] bg-verdeTitulo font-figtree text-[19px] leading-[35px] text-blanco hover:bg-[#44985a] hover:opacity-50 md:w-[370px] md:px-[30px] md:py-[8px]"
                                 >
                                     Obras de Drenaje Urbano Sostenible
-                                </Link>
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -119,7 +133,7 @@ export default function PlanVerdeAzul() {
                 ></div>
             </section>
 
-            <section className="md:py-[70px]">
+            <section className="md:py-[70px]" ref={anilloVerdeRef}>
                 <div className="container mx-auto">
                     <div className="grid grid-cols-2">
                         <div className="col-span-1 flex flex-col justify-between md:h-[532px] md:pr-[55px]">
@@ -161,7 +175,7 @@ export default function PlanVerdeAzul() {
                 </div>
             </section>
 
-            <section className="bg-[#EFEFEF] md:py-[70px]">
+            <section className="bg-[#EFEFEF] md:py-[70px]" ref={drenajeRef}>
                 <div className="container mx-auto">
                     <div className="grid grid-cols-2">
                         <div className="flex flex-col justify-center md:h-[532px] md:pr-[55px]">
