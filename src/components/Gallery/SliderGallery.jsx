@@ -37,7 +37,7 @@ export default function SliderGallery({ slides }) {
                             height={386}
                             className="h-auto w-full cursor-pointer rounded-[30px]"
                         />
-                        <div className="absolute inset-0 flex items-center justify-center rounded-[30px] bg-gray-800 bg-opacity-50 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                        <div className="absolute inset-0 flex cursor-pointer items-center justify-center rounded-[30px] bg-gray-800 bg-opacity-50 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
                             <Image src={zoomHover} alt="Zoom" width={48} height={48} />
                         </div>
                     </div>
