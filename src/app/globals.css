@@ -70,3 +70,19 @@
     @apply bg-background text-foreground;
     }
 }
+
+.section-background {
+      background-size: cover;
+      background-position: top;
+}
+@media (max-width: 640px) {
+      .section-background {
+            background-image: url('/mobile/urbanizacion-sostenible.webp');
+      }
+}
+
+@media (min-width: 641px) {
+      .section-background {
+            background-image: url('/fondo-urbanizacion.webp');
+      }
+}

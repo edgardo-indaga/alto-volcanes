@@ -21,20 +21,22 @@ export default function Home() {
     const pinMapa = '/ubicacion.svg';
     const floresFondo = '/fondo-flores.webp';
     const fondoBosque = '/fondo-urbanizacion.webp';
+    const fondoBosqueMobile = '/mobile/urbanizacion-sostenible.webp';
     const urbanizacionSostenible = '/urbanizacion-sostenible.webp';
+    const timeLineMobile = '/mobile/timeline-alto-volcanes.webp';
 
     return (
         <>
             <HeaderHome />
 
-            <section id="proyecto" className="md:py-[70px]">
+            <section id="proyecto" className="px-[15px] py-[50px] sm:px-0 md:py-[70px]">
                 <div className="container mx-auto">
                     <div className="flex flex-col">
                         <div className="flex flex-col items-center">
                             <h1 className="font-sora text-[47px] leading-[47px] tracking-[0.1em] text-verdeTitulo">
                                 EL PROYECTO
                             </h1>
-                            <div className="md:mt-[50px] md:w-[600px]">
+                            <div className="mt-[40px] md:mt-[50px] md:w-[600px]">
                                 <ParrafoComponent
                                     align="text-center"
                                     text="Alto Volcanes es un proyecto de urbanización que habilitará
@@ -47,11 +49,11 @@ export default function Home() {
                 </div>
             </section>
 
-            <section>
-                <div className="container mx-auto md:mb-[70px]">
+            <section className="mb-[50px] px-[15px] sm:px-0 md:mb-[70px]">
+                <div className="container mx-auto">
                     <div className="flex-fol flex items-center justify-center">
                         <div
-                            className="flex h-[527px] w-[995px] flex-col items-center justify-center rounded-[30px] drop-shadow-xl"
+                            className="flex h-[500px] flex-col items-center justify-center rounded-[30px] px-[15px] drop-shadow-xl sm:h-[527px] sm:w-[995px] sm:px-0"
                             style={{
                                 backgroundImage: `url(${photoProyecto})`,
                                 backgroundSize: 'cover',
@@ -70,17 +72,17 @@ export default function Home() {
                 </div>
             </section>
 
-            <section>
-                <div className="container mx-auto md:py-[70px]">
-                    <div className="grid grid-cols-2">
-                        <div className="span col-1 flex flex-col justify-center md:h-[400px] md:pr-[100px]">
-                            <div className="flex md:mb-[40px]">
+            <section className="px-[15px] py-[50px] sm:px-0 md:py-[70px]">
+                <div className="container mx-auto">
+                    <div className="flex flex-col sm:grid sm:grid-cols-2">
+                        <div className="flex flex-col justify-center sm:col-span-1 md:h-[400px] md:pr-[100px]">
+                            <div className="mb-[30px] flex md:mb-[30px]">
                                 <Image
                                     src={pinMapa}
                                     alt={'Pin Mapa'}
                                     width={19.78}
                                     height={25.72}
-                                    className="mr-[20px]"
+                                    className="mr-[15px] sm:mr-[20px]"
                                     priority
                                 />
                                 <h2 className="font-sora text-[25px] font-semibold leading-[35px] tracking-[0.1em] text-verdeTitulo">
@@ -100,7 +102,7 @@ export default function Home() {
                                 />
                             </div>
                         </div>
-                        <div className="span col-1 md:h-[400px]">
+                        <div className="mt-[30px] h-[300px] sm:col-span-1 sm:mt-0 md:h-[400px]">
                             <SliderGallery slides={carousel} />
                         </div>
                     </div>
@@ -108,7 +110,7 @@ export default function Home() {
             </section>
 
             <section
-                className="md:pb-[160px] md:pt-[70px]"
+                className="px-[15px] py-[70px] sm:px-0 md:pb-[160px] md:pt-[70px]"
                 style={{
                     backgroundImage: `url(${floresFondo})`,
                     backgroundSize: 'cover',
@@ -117,7 +119,7 @@ export default function Home() {
             >
                 <div className="container mx-auto">
                     <div className="flex flex-col items-center justify-center md:h-[600px]">
-                        <div className="flex w-[600px] md:flex-col">
+                        <div className="flex flex-col sm:w-[600px]">
                             <h3 className="mb-[40px] text-center font-figtree text-[25px] font-bold leading-[35px] text-grisTitulo">
                                 Alto Volcanes ingresó al SEIA vía Estudio de Impacto Ambiental
                                 (EIA).
@@ -130,13 +132,23 @@ export default function Home() {
                                 con sus respectivos planes de seguimiento."
                             />
                         </div>
-                        <div className="flex md:h-[350px]">
+                        <div className="hidden sm:flex md:h-[350px]">
                             <StepperWithTooltips />
+                        </div>
+                        <div>
+                            <Image
+                                src={timeLineMobile}
+                                alt="Time Line"
+                                className=""
+                                width={400}
+                                height={866}
+                                className="block h-[650px] w-[300px] sm:hidden"
+                            />
                         </div>
                         <div>
                             <a
                                 href="https://seia.sea.gob.cl/expediente/expedientesEvaluacion.php?modo=ficha&id_expediente=2161208595"
-                                className="flex rounded-[30px] bg-verdeTitulo font-figtree text-[19px] leading-[35px] text-blanco hover:bg-[#44985a] hover:opacity-50 md:px-[30px] md:py-[8px]"
+                                className="flex rounded-[30px] bg-verdeTitulo px-[20px] py-[10px] font-figtree text-[14px] leading-[30px] text-blanco hover:bg-[#44985a] hover:opacity-50 sm:text-[19px] sm:leading-[35px] md:px-[30px] md:py-[8px]"
                                 target={'_blank'}
                             >
                                 <ArrowDownToLine className="mr-[10px] mt-[8px]" size={20} />
@@ -147,30 +159,23 @@ export default function Home() {
                 </div>
             </section>
 
-            <section
-                className="h-[720px] md:py-[70px]"
-                style={{
-                    backgroundImage: `url(${fondoBosque})`,
-                    backgroundSize: 'cover',
-                    backgroundPosition: 'top',
-                }}
-            >
+            <section className="section-background px-[15px] py-[70px] sm:h-[720px] sm:px-0 md:py-[70px] md:pb-[160px] md:pt-[70px]">
                 <div className="container mx-auto">
-                    <div className="grid grid-cols-2">
-                        <div className="col-span-1">
+                    <div className="flex flex-col sm:grid sm:grid-cols-2">
+                        <div className="order-2 flex justify-center sm:order-1 sm:col-span-1 sm:justify-normal">
                             <Image
                                 src={urbanizacionSostenible}
                                 alt={'Urbanización Sostenible'}
                                 width={432}
                                 height={646}
-                                className="md:mt-[-140px]"
+                                className="mt-[30px] h-auto w-[300px] sm:h-[646px] sm:w-[432px] md:mt-[-140px]"
                             />
                         </div>
-                        <div className="col-span-1 flex flex-col items-end justify-center md:h-[580px]">
-                            <h1 className="font-sora text-[47px] uppercase leading-[47px] tracking-[0.1em] text-blanco md:text-end">
+                        <div className="order-1 mb-[30px] flex flex-col justify-center sm:order-2 sm:col-span-1 sm:mb-0 sm:items-end md:h-[580px]">
+                            <h1 className="text-center font-sora text-[40px] uppercase leading-[47px] tracking-[0.1em] text-blanco sm:text-[47px] sm:leading-[47px] md:text-end">
                                 Urbanización sostenible
                             </h1>
-                            <p className="mb-[20px] font-figtree text-[16px] font-normal leading-[24px] text-blanco md:my-[60px] md:text-end">
+                            <p className="my-[30px] mb-[50px] font-figtree text-[16px] font-normal leading-[24px] text-blanco sm:mb-[20px] md:my-[60px] md:text-end">
                                 Alto Volcanes pretende ser un referente de buenas prácticas, que
                                 reduce su impacto y protege los valores ambientales del lugar. Esto,
                                 mediante un Plan Verdeazul orientado conservar
@@ -179,7 +184,7 @@ export default function Home() {
                                 de alto estándar paisajístico.
                             </p>
                             <Link
-                                className="rounded-[30px] border-[2px] border-blanco text-center font-figtree text-[19px] leading-[35px] text-blanco hover:bg-blanco hover:text-grisTitulo hover:opacity-50 md:px-[30px] md:py-[8px]"
+                                className="rounded-[30px] border-[2px] border-blanco py-[10px] text-center font-figtree text-[19px] leading-[35px] text-blanco hover:bg-blanco hover:text-grisTitulo hover:opacity-50 md:px-[30px] md:py-[8px]"
                                 href="/plan"
                             >
                                 PLAN MAESTRO VERDEAZUL
