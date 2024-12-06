@@ -1,6 +1,7 @@
 import './globals.css';
 import HamburgerMenu from '@/components/HamburgerMenu/HamburgerMenu';
 import FooterComponent from '@/components/Footer/Footer';
+import { GoogleAnalytics } from '@next/third-parties/google';
 
 export const metadata = {
     title: 'Alto Volcanes',
@@ -10,6 +11,26 @@ export const metadata = {
     authors: [{ name: 'Edgardo Ruotolo Cardozo', url: 'https://crowadvance.com' }],
     creator: 'Edgardo Ruotolo Cardozo',
     publisher: 'Edgardo Ruotolo Cardozo',
+    category: 'Inmobiliaria Sostenible',
+    robots: {
+        index: true,
+        follow: true,
+        nocache: true,
+        googleBot: {
+            index: true,
+            follow: true,
+            noimageindex: true,
+            'max-video-preview': -1,
+            'max-image-preview': 'large',
+            'max-snippet': -1,
+        },
+    },
+    alternates: {
+        canonical: 'https://www.altovolcanes.cl/',
+        language: {
+            es: '/',
+        },
+    },
 };
 
 export default function RootLayout({ children }) {
@@ -19,6 +40,7 @@ export default function RootLayout({ children }) {
                 <HamburgerMenu />
                 <main>{children}</main>
                 <FooterComponent />
+                <GoogleAnalytics gaId="G-49V3HNY3PG" />
             </body>
         </html>
     );
