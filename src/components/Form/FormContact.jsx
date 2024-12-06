@@ -49,11 +49,11 @@ export const FormContact = () => {
             </div>
         </div>
     ) : (
-        <div className="container mx-auto mt-[40px] md:mt-[70px]">
+        <div className="container mx-auto px-[15px] sm:px-0 md:mt-[70px]">
             <div className="flex justify-center">
                 <form onSubmit={onSubmit} className="md:w-[800px]">
-                    <div className="grid grid-cols-2 md:py-[20px]">
-                        <div className="col-span-1 md:pr-[10px]">
+                    <div className="py-[20px] sm:grid sm:grid-cols-2">
+                        <div className="sm:col-span-1 md:pr-[10px]">
                             <input
                                 type="text"
                                 value={name}
@@ -61,10 +61,10 @@ export const FormContact = () => {
                                 placeholder="Nombre/Apellido *"
                                 autoComplete="name"
                                 required
-                                className="rounded-[16px] border-[1px] border-[#151515] px-[15px] font-figtree text-[16px] font-normal italic leading-[24px] text-[#707070] md:h-[58px] md:w-full"
+                                className="h-[45px] w-full rounded-[16px] border-[1px] border-[#151515] px-[15px] font-figtree text-[16px] font-normal italic leading-[24px] text-[#707070] md:h-[58px]"
                             />
                         </div>
-                        <div className="col-span-1 md:pl-[10px]">
+                        <div className="col-span-1 pt-[20px] sm:pt-0 md:pl-[10px]">
                             <input
                                 value={email}
                                 onChange={(e) => setEmail(e.target.value)}
@@ -72,21 +72,21 @@ export const FormContact = () => {
                                 placeholder="Email *"
                                 autoComplete="email"
                                 required
-                                className="rounded-[16px] border-[1px] border-[#151515] px-[15px] font-figtree text-[16px] font-normal italic leading-[24px] text-[#707070] md:h-[58px] md:w-full"
+                                className="h-[45px] w-full rounded-[16px] border-[1px] border-[#151515] px-[15px] font-figtree text-[16px] font-normal italic leading-[24px] text-[#707070] md:h-[58px]"
                             />
                         </div>
                     </div>
-                    <div className="md:py-[20px]">
+                    <div className="sm:py-[20px]">
                         <input
                             value={subject}
                             onChange={(e) => setSubject(e.target.value)}
                             type="text"
                             placeholder="Asunto *"
                             required
-                            className="rounded-[16px] border-[1px] border-[#151515] px-[15px] font-figtree text-[16px] font-normal italic leading-[24px] text-[#707070] md:h-[58px] md:w-full"
+                            className="h-[45px] w-full rounded-[16px] border-[1px] border-[#151515] px-[15px] font-figtree text-[16px] font-normal italic leading-[24px] text-[#707070] md:h-[58px]"
                         />
                     </div>
-                    <div className="md:py-[20px]">
+                    <div className="py-[20px]">
                         <textarea
                             cols="30"
                             rows="10"
@@ -97,7 +97,7 @@ export const FormContact = () => {
                             className="rounded-[16px] border-[1px] border-[#151515] p-[15px] font-figtree text-[16px] font-normal italic leading-[24px] text-[#707070] md:w-full"
                         ></textarea>
                     </div>
-                    <div className="flex justify-center md:py-[20px]">
+                    <div className="flex justify-center pb-[70px] sm:py-[20px]">
                         <button
                             type="submit"
                             className="rounded-[30px] bg-verdeTitulo px-[40px] py-[8px] text-[19px] font-medium leading-[35px] text-blanco"

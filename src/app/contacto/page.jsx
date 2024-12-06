@@ -7,7 +7,7 @@ export default function Contacto() {
     return (
         <>
             <section
-                className="mt-[-200px] md:h-[800px]"
+                className="mt-[-200px] h-[90vh] px-[15px] sm:px-0 md:h-[800px]"
                 style={{
                     backgroundImage: `url(${portadaContact})`,
                     backgroundSize: 'cover',
@@ -15,7 +15,7 @@ export default function Contacto() {
                 }}
             >
                 <div className="container mx-auto">
-                    <div className="flex flex-col items-center justify-center md:pt-[500px]">
+                    <div className="flex flex-col items-center justify-center pt-[500px] md:pt-[500px]">
                         <h1 className="font-sora text-[47px] leading-[47px] tracking-[0.1em] text-verdeTitulo">
                             CONTACTO
                         </h1>
