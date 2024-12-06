@@ -20,8 +20,6 @@ export default function Home() {
     const photoProyecto = '/foto_proyecto.webp';
     const pinMapa = '/ubicacion.svg';
     const floresFondo = '/fondo-flores.webp';
-    const fondoBosque = '/fondo-urbanizacion.webp';
-    const fondoBosqueMobile = '/mobile/urbanizacion-sostenible.webp';
     const urbanizacionSostenible = '/urbanizacion-sostenible.webp';
     const timeLineMobile = '/mobile/timeline-alto-volcanes.webp';
 
@@ -139,7 +137,6 @@ export default function Home() {
                             <Image
                                 src={timeLineMobile}
                                 alt="Time Line"
-                                className=""
                                 width={400}
                                 height={866}
                                 className="block h-[650px] w-[300px] sm:hidden"
