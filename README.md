@@ -14,23 +14,23 @@ pnpm dev
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Abre http://localhost:3000 con tu navegador para ver el resultado.  
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+Puedes comenzar a editar la página modificando src/app/page.js. La página se actualiza automáticamente a medida que editas el archivo. 
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Este proyecto utiliza next/font para optimizar y cargar automáticamente Inter, una fuente personalizada de Google.  
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+Aprender más
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Para aprender más sobre Next.js, echa un vistazo a los siguientes recursos:  
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Documentación de Next.js - aprende sobre las características y API de Next.js.
+Aprende Next.js - un tutorial interactivo de Next.js.
 
-## Deploy on Vercel
+Puedes revisar el repositorio de GitHub de Next.js - tus comentarios y contribuciones son bienvenidos.  
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Despliegue en Vercel
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+La forma más fácil de desplegar tu aplicación Next.js es usar la Plataforma Vercel de los creadores de Next.js.  Consulta nuestra documentación de despliegue de Next.js para más detalles.
+

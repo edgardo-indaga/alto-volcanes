@@ -37,7 +37,7 @@ export default function Home() {
                             <div className="mt-[40px] md:mt-[50px] md:w-[600px]">
                                 <ParrafoComponent
                                     align="text-center"
-                                    text="Alto Volcanes es un proyecto de urbanización que habilitará
+                                    text="Alto Volcanes es un <b>proyecto de urbanización</b> que habilitará
                                     calles y manzanas a partir de las cuales se crearán nuevos
                                     conjuntos habitacionales."
                                 />
@@ -61,7 +61,7 @@ export default function Home() {
                             <div className="flex flex-col items-center justify-center rounded-[30px] bg-blanco p-[30px] opacity-85 md:h-[246px] md:w-[500px]">
                                 <ParrafoComponent
                                     align="text-center"
-                                    text="El proyecto busca dar respuesta a las <b>necesidades locales de vivienda, equipamiento e infraestructura vial</b>y, al mismo tiempo, asegurar la conservación de la biodiversidad, la provisión de servicios ecosistémicos y el respeto por las identidades locales, para un habitar sostenible y armónico."
+                                    text="El proyecto busca dar respuesta a las <b>necesidades locales de vivienda, equipamiento e infraestructura vial</b> y, al mismo tiempo, asegurar la conservación de la biodiversidad, la provisión de servicios ecosistémicos y el respeto por las identidades locales, para un habitar sostenible y armónico."
                                 />
                                 <GalleryText slides={slides} />
                             </div>
@@ -175,8 +175,7 @@ export default function Home() {
                             <p className="my-[30px] mb-[50px] font-figtree text-[16px] font-normal leading-[24px] text-blanco sm:mb-[20px] md:my-[60px] md:text-end">
                                 Alto Volcanes pretende ser un referente de buenas prácticas, que
                                 reduce su impacto y protege los valores ambientales del lugar. Esto,
-                                mediante un Plan Verdeazul orientado conservar
-                                <b>el régimen hidrológico del sistema</b>, proveer hábitat y
+                                mediante un Plan Verdeazul orientado conservar <b>el régimen hidrológico del sistema</b>, proveer hábitat y
                                 conectividad ecológica y ofrecer espacios naturales de uso público
                                 de alto estándar paisajístico.
                             </p>
