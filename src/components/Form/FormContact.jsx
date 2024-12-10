@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import {useState} from 'react';
 
 export const FormContact = () => {
     const [isSubmitted, setSubmitted] = useState(false);
@@ -12,7 +12,7 @@ export const FormContact = () => {
     const onSubmit = async (e) => {
         e.preventDefault();
         try {
-            const res = await fetch('/api/contact/contact', {
+            const res = await fetch('/api/contact/', {
                 // Replace with your actual API route for SMTP
                 method: 'POST',
                 body: JSON.stringify({
