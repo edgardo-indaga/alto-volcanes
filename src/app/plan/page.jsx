@@ -1,7 +1,7 @@
 'use client';
 
 import Image from 'next/image';
-import { useRef } from 'react';
+import {useRef} from 'react';
 
 import ParrafoComponent from '@/components/ParrafoComponent/ParrafoComponent';
 import SingleImageLightbox from '@/components/Gallery/SingleImageLightbox';
@@ -63,10 +63,10 @@ export default function PlanVerdeAzul() {
                 <div className="container z-10 mx-auto">
                     <div className="sm:grid sm:grid-cols-2">
                         <div className="col-span-1 my-[20px] flex justify-center sm:my-0">
-                            <SingleImageLightbox imageUrl={plan01} />
+                            <SingleImageLightbox imageUrl={plan01}/>
                         </div>
                         <div className="col-span-1 my-[20px] flex justify-center sm:my-0">
-                            <SingleImageLightbox imageUrl={plan02} />
+                            <SingleImageLightbox imageUrl={plan02}/>
                         </div>
                     </div>
                 </div>
@@ -122,32 +122,32 @@ export default function PlanVerdeAzul() {
                 </div>
             </section>
 
-            <section className="h-[250px] py-[50px] md:mb-[50px] md:mt-[100px] md:h-[780px]">
-                <div
-                    className="hidden h-[400px] sm:block md:h-[780px]"
-                    style={{
-                        backgroundImage: `url(${bannerPlan})`,
-                        backgroundSize: 'cover',
-                        backgroundPosition: 'top',
-                    }}
-                ></div>
+            <section className="h-[250px] py-[50px] sm:py-0 md:mb-[100px] md:mt-[100px] md:h-[400px] xl:h-[800px]">
+                <div className="hidden h-[400px] sm:block">
+                    <Image src={bannerPlan} alt={'Banner Planer'} height={2125} width={4725}
+                           className="w-[100vw] h-auto"/>
+                </div>
                 <div className="block px-[15px] sm:hidden">
-                    <SingleImageLightbox imageUrl={bannerPlan} />
+                    <SingleImageLightbox imageUrl={bannerPlan}/>
                 </div>
             </section>
 
             <section className="px-[15px] py-[50px] sm:px-0 md:py-[70px]" ref={anilloVerdeRef}>
                 <div className="container mx-auto">
                     <div className="sm:grid sm:grid-cols-2">
-                        <div className="mb-[30px] flex flex-col justify-between sm:col-span-1 sm:mb-0 md:h-[532px] md:pr-[55px]">
+                        <div
+                            className="mb-[30px] flex flex-col justify-between sm:col-span-1 sm:mb-0 md:h-[532px] md:pr-[55px]">
                             <h1 className="mb-[30px] text-center font-sora text-[40px] font-medium leading-[48px] tracking-[0.1em] text-grisTitulo sm:text-left sm:leading-[55px] md:mb-[40px] md:text-[47px]">
-                                ANILLO <br /> VERDE
+                                ANILLO <br/> VERDE
                             </h1>
 
-                            <ParrafoComponent text="El proyecto contempla un Anillo Verde de más de 26 ha, que integra humedales, estero y bosque nativo, orientado a la <b>protección, renaturalización y conectividad de ecosistemas,</b> así como al disfrute y uso público." />
-                            <ParrafoComponent text="Este espacio incluye un circuito interpretativo, miradores y ciclovías, ofreciendo zonas con alto potencial para la recreación y aprendizaje al aire libre." />
+                            <ParrafoComponent
+                                text="El proyecto contempla un Anillo Verde de más de 26 ha, que integra humedales, estero y bosque nativo, orientado a la <b>protección, renaturalización y conectividad de ecosistemas,</b> así como al disfrute y uso público."/>
+                            <ParrafoComponent
+                                text="Este espacio incluye un circuito interpretativo, miradores y ciclovías, ofreciendo zonas con alto potencial para la recreación y aprendizaje al aire libre."/>
 
-                            <div className="flex h-[60px] items-center justify-center rounded-[30px] bg-[#EDF4EA] md:h-[100px] md:w-[496px]">
+                            <div
+                                className="flex h-[60px] items-center justify-center rounded-[30px] bg-[#EDF4EA] md:h-[100px] md:w-[496px]">
                                 <Image
                                     src={veintiCuatro}
                                     alt={'24 Hectareas'}
@@ -173,7 +173,7 @@ export default function PlanVerdeAzul() {
             <section className="pb-[70px] md:py-[70px]">
                 <div className="container mx-auto">
                     <div className="flex justify-center">
-                        <ArrowSliderGallery images={slider} />
+                        <ArrowSliderGallery images={slider}/>
                     </div>
                 </div>
             </section>
@@ -183,14 +183,15 @@ export default function PlanVerdeAzul() {
                     <div className="sm:grid sm:grid-cols-2">
                         <div className="flex flex-col justify-center md:h-[532px] md:pr-[55px]">
                             <h1 className="mb-[20px] text-center font-sora text-[40px] font-medium leading-[45px] tracking-[0.1em] text-grisTitulo sm:text-left sm:leading-[55px] md:text-[47px]">
-                                DRENAJE <br />
-                                URBANO <br />
+                                DRENAJE <br/>
+                                URBANO <br/>
                                 SOSTENIBLE
                             </h1>
                             <h5 className="mb-[30px] text-center font-figtree text-[25px] font-medium italic leading-[35px] text-[#2b9440] opacity-60 sm:text-left md:mb-[40px]">
                                 GESTIÓN LOCAL DE LAS AGUAS LLUVIAS
                             </h5>
-                            <ParrafoComponent text="El proyecto integra soluciones de drenaje urbano sostenible, que busca mantener el <b>ciclo local del agua</b>. Esto se traduce en que los conjuntos de viviendas entregarán buena parte de sus aguas lluvias al sistema natural de esteros y humedales, previniendo inundaciones en zonas habitadas y conservando los ecosistemas." />
+                            <ParrafoComponent
+                                text="El proyecto integra soluciones de drenaje urbano sostenible, que busca mantener el <b>ciclo local del agua</b>. Esto se traduce en que los conjuntos de viviendas entregarán buena parte de sus aguas lluvias al sistema natural de esteros y humedales, previniendo inundaciones en zonas habitadas y conservando los ecosistemas."/>
                         </div>
                         <div className="my-[30px] flex justify-center sm:col-span-1 sm:my-0">
                             <AlterSingleImageLightbox
@@ -200,7 +201,7 @@ export default function PlanVerdeAzul() {
                         </div>
                     </div>
                     <div className="mt-[50px] flex justify-center md:mt-[70px]">
-                        <ArrowSliderGallery images={sliderOtro} />
+                        <ArrowSliderGallery images={sliderOtro}/>
                     </div>
                 </div>
             </section>
