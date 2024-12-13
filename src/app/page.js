@@ -20,7 +20,7 @@ export default function Home() {
     const photoProyecto = '/foto_proyecto.webp';
     const pinMapa = '/ubicacion.svg';
     const floresFondo = '/fondo-flores.webp';
-    const urbanizacionSostenible = '/urbanizacion-sostenible.webp';
+    const urbanizacionSostenible = '/urba-sostenible.webp';
     const timeLineMobile = '/mobile/timeline-alto-volcanes.webp';
 
     return (
@@ -165,7 +165,7 @@ export default function Home() {
                                 alt={'Urbanización Sostenible'}
                                 width={432}
                                 height={646}
-                                className="mt-[30px] h-auto w-[300px] sm:h-[646px] sm:w-[432px] md:mt-[-140px]"
+                                className="mt-[30px] h-auto w-[300px] sm:h-[646px] sm:w-[432px] md:mt-[-140px] rounded-[30px]"
                             />
                         </div>
                         <div className="order-1 mb-[30px] flex flex-col justify-center sm:order-2 sm:col-span-1 sm:mb-0 sm:items-end md:h-[580px]">
